@@ -20,8 +20,8 @@ For instance test1.txt could be:
 void findHamiltonian(int *neighborhood, int *passedV, int *pathV,int currentV, int N);
 void findAlmostHamiltonian(int *neighborhood, int *passedV, int *pathV,int currentV, int N);
 int allPassed(int *passedV, int *pathV, int *neighborhood, int N);
-void addToPath(int *pathV, int vertix, int N);
-void removeFromPath(int *pathV, int vertix, int N);
+void addToPath(int *pathV, int vertex, int N);
+void removeFromPath(int *pathV, int vertex, int N);
 void printPath(int *pathV, int N);
 int isHamiltonianCycle(int *pathV, int *neighborhood, int N);
 
@@ -145,20 +145,20 @@ int allPassed(int *passedV, int *pathV, int *neighborhood, int N) {
 	return 1;
 }
 
-//a a vertix from the path
-void addToPath(int *pathV, int vertix, int N){
+//a a vertex to the path
+void addToPath(int *pathV, int vertex, int N){
 	for (int i = N-1; i >= 0; i--) {
 		if (pathV[i] == -1) {
-			pathV[i] = vertix;
+			pathV[i] = vertex;
 			break;
 		} 
 	}
 }
 
-//remove a vertix to the path
-void removeFromPath(int *pathV, int vertix, int N){
+//remove a vertex from the path
+void removeFromPath(int *pathV, int vertex, int N){
 	for (int i = N-1; i >= 0; i--) {
-		if (pathV[i] == vertix) {
+		if (pathV[i] == vertex) {
 			pathV[i] = -1;
 			break;
 		} 
@@ -175,7 +175,7 @@ void printPath(int *pathV, int N) {
 	}
 }
 
-//check if cpath is hamiltonian cycle
+//check if path is a hamiltonian cycle
 int isHamiltonianCycle(int *pathV, int *neighborhood, int N) {
 if (pathV[N-1] == -1 || pathV[0] == -1) {
 	return 0;
