@@ -10,7 +10,11 @@ File should in a first line state the number of vetices in the graph, followed b
 
 For instance test1.txt could be:
 4
+
 0111
+
 1011
+
 1101
+
 1101
