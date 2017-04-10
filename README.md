@@ -9,12 +9,9 @@ So if we have a file test1.txt we call the compiled program  with a command to t
 File should in a first line state the number of vetices in the graph, followed by the adjacency matrix in the next lines.
 
 For instance test1.txt could be:
-4
 
-0111
-
-1011
-
-1101
-
+4<br />
+0111<br />
+1011<br />
+1101<br />
 1101
